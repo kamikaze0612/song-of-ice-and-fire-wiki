@@ -471,6 +471,7 @@ body > * {
 }
 .footer {
   background-color: #0d0d0e;
+  border-top: 5px solid #f2af0d;
   color: #ffe066;
   padding: 2rem;
 }
