@@ -1,0 +1,82 @@
+.house {
+  overflow: hidden;
+  cursor: pointer;
+  height: 40vw;
+  position: relative;
+  transition: all 0.4s;
+
+  &__instruction {
+    font-size: 2rem;
+    text-align: center;
+    color: $color-grey-dark--1;
+  }
+
+  &__name {
+    font-size: 2.4rem;
+    font-family: $font-title;
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+    line-height: 1.3;
+    top: 2rem;
+    opacity: 0;
+    width: min-content;
+    left: 50%;
+    transform: translate(-50%, -6rem);
+    transition: all 0.4s;
+    font-weight: 600;
+
+    &--stark {
+      color: #6f7072;
+    }
+    &--targaryen {
+      color: #be0002;
+    }
+    &--martell {
+      color: #a00202;
+    }
+    &--greyjoy {
+      color: #ffb901;
+    }
+    &--tyrell {
+      color: #ffc300;
+    }
+    &--baratheon {
+      color: #000;
+    }
+    &--lannister {
+      color: #faa702;
+    }
+    &--arryn {
+      color: #fff;
+    }
+    &--tully {
+      color: #fff;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+    object-fit: cover;
+    object-position: center;
+    z-index: 10;
+  }
+
+  &:hover &__img,
+  &.clicked &__img {
+    transform: scale(1.2);
+  }
+
+  &:hover &__name,
+  &.clicked &__name {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  &:hover,
+  &.clicked {
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+  }
+}

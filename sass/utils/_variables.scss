@@ -1,0 +1,34 @@
+$color-white: #fff;
+
+$color-primary: #ffe066;
+$color-secondary: #f2af0d;
+$color-primary-dark: darken($color-primary, 40%);
+$color-secondary-dark: darken($color-secondary, 40%);
+
+$color-blue-light--1: #e7f5ff;
+$color-blue-light--2: #74c0fc;
+
+$color-orange-light--1: #ffe8cc;
+$color-orange-light--2: #ffa94d;
+
+$color-grey-light--1: #faf9f9;
+$color-grey-light--2: #f4f2f2;
+$color-grey-light--3: #f0eeee;
+$color-grey-light--4: #ccc;
+
+$color-grey-dark--0: #212529;
+$color-grey-dark--1: #333;
+$color-grey-dark--2: #777;
+$color-grey-dark--3: #999;
+$color-grey-dark--4: #0d0d0e;
+
+$font-kings-name: "Tangerine", serif;
+$font-house-name: "Abhaya Libre", serif;
+$font-title: "Cinzel", serif;
+$font-text: "Cormorant", serif;
+
+%background-color-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

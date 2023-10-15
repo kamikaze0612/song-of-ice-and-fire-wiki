@@ -1,0 +1,113 @@
+.modal {
+  display: none;
+
+  &.open {
+    padding: 1.6rem 0;
+    display: block;
+  }
+
+  &__content {
+    max-width: 84rem;
+    margin: 4.8rem auto;
+    border-radius: 10px;
+    padding: 4.8rem 6.4rem;
+
+    &--stark {
+      background-image: linear-gradient(to bottom, #dbdbdb, #bababa);
+      color: lighten($color-grey-dark--1, 10%);
+    }
+
+    &--targaryen {
+      background-image: linear-gradient(to bottom, #2b2b2b, #000);
+      color: $color-grey-light--3;
+    }
+
+    &--martell {
+      background-image: linear-gradient(to bottom, #ffc078, #ff922b);
+      color: $color-grey-dark--1;
+    }
+
+    &--greyjoy {
+      background-color: #000;
+      color: $color-grey-light--3;
+    }
+
+    &--tyrell {
+      background-image: linear-gradient(to bottom, #ffec99, #ffe066);
+      color: $color-grey-dark--1;
+    }
+
+    &--baratheon {
+      background-image: linear-gradient(to bottom, #fcc419, #f59f00);
+    }
+
+    &--lannister {
+      background-image: linear-gradient(to right bottom, #e84118, #c23616);
+      color: $color-grey-light--3;
+    }
+
+    &--arryn {
+      background-image: linear-gradient(to bottom, #74c0fc, #1c7ed6);
+      color: $color-grey-light--1;
+    }
+
+    &--tully {
+      background-image: linear-gradient(to bottom, #e03131, #c92a2a);
+      color: $color-grey-light--1;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 7.4rem;
+    font-family: $font-house-name;
+    margin-bottom: 1.2rem;
+  }
+
+  &__word {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 6.4rem;
+
+    &::before {
+      content: "\201C";
+    }
+
+    &::after {
+      content: "\201D";
+    }
+  }
+
+  &__desc {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 6.4rem;
+    row-gap: 4.8rem;
+    align-items: start;
+  }
+
+  &__sigil {
+    max-width: 24rem;
+    height: auto;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+  }
+
+  &__item {
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+    font-size: 2.2rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+}

@@ -1,0 +1,136 @@
+.king {
+  align-items: center;
+  position: relative;
+  perspective: 150rem;
+  height: 32rem;
+  width: 24rem;
+
+  &__side {
+    height: 32rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    width: 100%;
+    border-radius: 20px;
+
+    &--front {
+      border: 3px solid $color-grey-dark--0;
+      overflow: hidden;
+    }
+
+    &--back {
+      padding: 2.4rem;
+      transform: rotateY(-180deg);
+      background-color: $color-grey-dark--4;
+      border: 5px double $color-primary;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 4.8rem;
+    justify-items: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 5px;
+      background-color: #212529;
+      width: 80%;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+    }
+
+    &:nth-child(even) {
+      &:not(:last-child) {
+        .king:nth-child(4) {
+          &::after {
+            content: "";
+            height: 30%;
+            position: absolute;
+            width: 5px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $color-grey-dark--4;
+          }
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      .king:nth-child(1) {
+        &::after {
+          content: "";
+          height: 30%;
+          position: absolute;
+          width: 5px;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: $color-grey-dark--4;
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__name {
+    font-family: $font-kings-name;
+    font-size: 2.6rem;
+  }
+
+  &__nickname {
+    font-size: 1.6rem;
+    font-family: $font-text;
+    margin-bottom: 2.4rem;
+    text-align: center;
+    color: $color-grey-light--4;
+
+    &::before {
+      content: "\201C";
+    }
+
+    &::after {
+      content: "\201D";
+    }
+  }
+
+  &__reign {
+    font-size: 1.6rem;
+    color: $color-grey-light--4;
+    text-align: center;
+    font-family: $font-title;
+  }
+}

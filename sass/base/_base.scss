@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  overscroll-behavior: none;
+}
+
+body {
+  box-sizing: border-box;
+  line-height: 1;
+  position: relative;
+  overflow-x: hidden;
+  font-family: $font-text;
+  font-weight: 400;
+}
+
+body > * {
+  scroll-margin: 70px;
+}

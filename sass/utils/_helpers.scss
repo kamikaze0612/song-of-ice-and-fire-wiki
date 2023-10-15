@@ -1,0 +1,31 @@
+.mg-bottom-sm {
+  margin-bottom: 1.2rem;
+}
+
+.mg-bottom-md {
+  margin-bottom: 2.4rem;
+}
+
+.mg-bottom-bg {
+  margin-bottom: 3.2rem;
+}
+
+.mg-bottom-hg {
+  margin-bottom: 4.8rem;
+}
+
+.bold {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: $font-text;
+  display: inline-block;
+  margin-right: 3px;
+
+  &--white {
+    color: #fff;
+  }
+
+  &--black {
+    color: #000;
+  }
+}

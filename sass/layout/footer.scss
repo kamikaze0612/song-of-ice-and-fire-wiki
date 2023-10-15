@@ -1,0 +1,43 @@
+.footer {
+  background-color: $color-grey-dark--4;
+  color: $color-primary;
+  padding: 2rem;
+
+  &__author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    gap: 6px;
+  }
+
+  &__icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    fill: currentColor;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-secondary;
+      font-weight: 500;
+      transition: all 0.4s;
+    }
+
+    &:active,
+    &:hover {
+      color: $color-primary-dark;
+      transform: translateY(-1px);
+    }
+  }
+
+  &__copyright {
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+}

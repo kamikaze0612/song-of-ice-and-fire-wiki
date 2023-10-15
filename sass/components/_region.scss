@@ -1,0 +1,74 @@
+.region {
+  &__map {
+    width: 100%;
+    border-top: 12px solid $color-primary;
+    border-bottom: 12px solid $color-primary;
+    cursor: pointer;
+
+    &-container {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__name {
+    font-size: 3.6rem;
+    font-weight: 700;
+    font-family: $font-title;
+    position: absolute;
+
+    &--north {
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--vale {
+      top: 39%;
+      right: 11%;
+      color: #0088ee;
+    }
+
+    &--riverlands {
+      top: 45%;
+      left: 25%;
+      color: #0000ba;
+    }
+
+    &--iron {
+      top: 53%;
+      left: 8%;
+    }
+
+    &--westerlands {
+      top: 65%;
+      left: 6%;
+      color: crimson;
+    }
+
+    &--crownsland {
+      top: 68%;
+      right: 1%;
+      color: #aa0101;
+    }
+
+    &--reach {
+      top: 75%;
+      left: 10%;
+      color: #008800;
+    }
+
+    &--stormlands {
+      top: 76%;
+      right: 3%;
+    }
+
+    &--dorne {
+      bottom: 3%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #cc0100;
+    }
+  }
+}

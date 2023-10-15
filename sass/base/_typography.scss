@@ -1,0 +1,17 @@
+.heading--primary {
+  font-size: 9.8rem;
+  font-family: $font-title;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.heading--secondary {
+  font-size: 5.2rem;
+  text-align: center;
+}
+
+.small {
+  font-size: 60%;
+}
