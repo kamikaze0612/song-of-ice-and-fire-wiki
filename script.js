@@ -45,15 +45,15 @@ const obs = new IntersectionObserver(
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
-    event.preventDefault();
-
     const href = link.getAttribute("href");
     if (href === "#") {
+      event.preventDefault();
       window.scroll({
         top: 0,
         behavior: "smooth",
       });
     } else if (href.startsWith("#")) {
+      event.preventDefault();
       const targetEl = document.querySelector(href);
       targetEl.scrollIntoView({ behavior: "smooth" });
     }
